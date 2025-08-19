@@ -1,17 +1,43 @@
+/** @type {import('tailwindcss').Config} */
 module.exports = {
-  darkMode: "class",
-  content: ["./src/**/*.{js,ts,jsx,tsx}"],
+  content: [
+    "./src/**/*.{js,ts,jsx,tsx,mdx}",
+  ],
   theme: {
     extend: {
       colors: {
-        brand: { DEFAULT: "#FFD60A", dark: "#FFC300" },
-        accent: { DEFAULT: "#1D4ED8", light: "#3B82F6" },
+        black: "#000000",
+        white: "#ffffff",
+        gray: {
+          300: "#d1d5db",
+          400: "#9ca3af",
+          500: "#6b7280",
+        },
+        cyan: {
+          400: "#22d3ee",
+          500: "#06b6d4",
+        },
+        pink: {
+          500: "#ec4899",
+        },
+        purple: {
+          500: "#8b5cf6",
+          600: "#7c3aed",
+        },
+        blue: {
+          500: "#3b82f6",
+          600: "#2563eb",
+        },
       },
-      boxShadow: {
-        soft: "0 1px 2px rgba(0,0,0,.06), 0 8px 24px rgba(0,0,0,.06)",
-        lift: "0 6px 24px rgba(0,0,0,.12)",
+      animation: {
+        'pulse': 'pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite',
       },
-      borderRadius: { xl: "14px", "2xl": "20px" },
+      backdropBlur: {
+        'xl': '24px',
+      },
+      blur: {
+        'xl': '24px',
+      },
     },
   },
   plugins: [],
